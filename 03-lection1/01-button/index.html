@@ -9,21 +9,33 @@
 
 <body>
     <main class="button-list">
-        <button class="button button__label button_primary button-list_button">
+        <button class="button button_primary button-list_button">
             Primary
         </button>
-        <button disabled class="button button__label button-list_button button_disable">
+        <button disabled class="button button_primary button-list_button button_disable">
             Primary disable
         </button>
-        <button class="button button__label button-list_button button_secondary">
+        <button class="button button-list_button button_secondary">
             Secondary
 
         </button>
-        <button disabled class="button button__label button-list_button button_disable">
+        <button disabled class="button button_secondary button-list_button button_disable">
             Secondary disable
         </button>
     </main>
 
+    <style>
+        .button-list {
+            display: block;
+            margin: 0;
+        }
+        
+        .button-list_button {
+            margin: 2%;
+        }
+    </style>
 </body>
+
+
 
 </html>

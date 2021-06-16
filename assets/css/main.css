@@ -11,6 +11,8 @@
     --grey-3: #ACB5BD;
     --grey-4: #495057;
     --yellow: yellow;
+    --hover-primary: #2342C0;
+    --hover-secondary: #5028C6;
     --error: var(--red);
     --success: var(--blue);
     --primary: var(--blue);
