@@ -1,5 +1,4 @@
 @import '../fonts/fonts.css';
-
 :root {
     --white: #ffffff;
     --black: #212429;
@@ -11,12 +10,16 @@
     --grey-2: #DDE2E5;
     --grey-3: #ACB5BD;
     --grey-4: #495057;
-
+    --yellow: yellow;
+    --hover-primary: #2342C0;
+    --hover-secondary: #5028C6;
     --error: var(--red);
     --success: var(--blue);
-
     --primary: var(--blue);
     --secondary: var(--purple);
+    --push: var(--grey-3);
+    --disable: var(--grey-3);
+    --alternate: var(--grey-4)
 }
 
 * {
