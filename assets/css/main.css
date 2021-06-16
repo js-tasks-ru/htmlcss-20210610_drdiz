@@ -19,6 +19,7 @@
     --secondary: var(--purple);
     --push: var(--grey-3);
     --disable: var(--grey-3);
+    --alternate: var(--grey-4)
 }
 
 * {

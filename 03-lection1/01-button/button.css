@@ -24,6 +24,13 @@
     background-color: var(--secondary);
 }
 
+.button_alternate {
+    background-color: var(--white);
+    color: var(--alternate);
+    border: 1px solid #ACB5BD;
+    box-sizing: border-box;
+}
+
 .button_primary:hover,
 .button_primary:active {
     background-color: var(--hover-primary);
@@ -34,7 +41,16 @@
     background-color: var(--hover-secondary);
 }
 
+.button_alternate:hover,
+.button_alternate:active {
+    border-color: var(--color);
+}
+
 .button_disable {
     opacity: 0.5;
     pointer-events: none;
+}
+
+.button_full_width {
+    width: 100%;
 }
