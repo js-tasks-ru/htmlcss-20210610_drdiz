@@ -1,74 +1,10 @@
 .page {
     display: block;
-    margin: 0;
     padding: 0;
     background: var(--white);
 }
 
-.page_box {
+.page__box {
     margin: 0 auto;
     max-width: 1110px;
 }
-
-.main {
-    display: block;
-    height: 1035px;
-    width: 100%;
-}
-
-.header {
-    padding: 96px 0 0 0;
-    height: 237px;
-    background: var(--white);
-}
-
-.header__container h1 {
-    font-size: 50px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 64px;
-    letter-spacing: 0em;
-    text-align: left;
-}
-
-
-/*footer*/
-
-.footer {
-    display: block;
-    height: 384px;
-    background: var(--white);
-    padding: 72px 0 0 0;
-}
-
-.footer__text,
-.footer__title {
-    display: block;
-    margin: 0 auto;
-    width: 640px;
-    height: auto;
-    text-align: center;
-    margin-bottom: 32px;
-    letter-spacing: 0em;
-}
-
-.footer__text h2 {
-    font-size: 38px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 48px;
-}
-
-.footer__text p {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-}
-
-.footer:last-child {
-    margin-bottom: 0;
-}
-
-
-/*footer*/
