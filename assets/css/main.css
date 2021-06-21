@@ -5,6 +5,7 @@
     --pink: #F784AD;
     --purple: #7048E8;
     --blue: #374FC7;
+    --blue-1: #4263EB;
     --red: #F03D3E;
     --grey-1: #F8F9FA;
     --grey-2: #DDE2E5;
@@ -19,9 +20,6 @@
     --secondary: var(--purple);
     --push: var(--grey-3);
     --disable: var(--grey-3);
-    --alternate: var(--grey-4)
-}
-
-* {
-    font-family: 'Roboto', sans-serif;
+    --alternate: var(--grey-4);
+    --inter: Inter;
 }

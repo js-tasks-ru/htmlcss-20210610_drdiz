@@ -1,0 +1,64 @@
+.histogramm {
+    font-family: var(--inter);
+    border: 1px solid var(--grey-3);
+    padding: 16px 24px 24px 24px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: var(--black);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+}
+
+.histogramm__title {
+    flex: 0 1 57%;
+    box-sizing: border-box;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.histogramm__viewlink {
+    flex: 0 1 42%;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: right;
+    color: var(--blue-1);
+}
+
+.histogramm__total {
+    flex: 0 1 100%;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.histogramm__visualisation {
+    flex: 0 1 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.histogramm__row {
+    background-color: var(--blue-1);
+    align-self: flex-end;
+    flex: 0 0.1 auto;
+    margin: 1px;
+    width: 3%;
+    height: 50px;
+}
