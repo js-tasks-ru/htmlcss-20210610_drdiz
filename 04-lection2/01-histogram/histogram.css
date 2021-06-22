@@ -34,17 +34,14 @@
 .histogramm__visualisation {
     flex: 0 1 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    align-items: flex-end;
     height: 50px;
+    align-items: flex-end;
 }
 
 .histogramm__row {
     background-color: var(--blue-1);
-    align-self: flex-end;
     flex: 0 1 auto;
     margin-right: 1px;
-    width: 9px;
     flex-grow: 1;
 }
