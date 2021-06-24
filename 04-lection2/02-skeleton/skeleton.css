@@ -7,7 +7,7 @@
     margin: 0;
     padding: 24px 32px 40px 32px;
     background: var(--white);
-    border: 1px solid #ACB5BD;
+    border: 1px solid var(--grey-3);
     box-sizing: border-box;
     border-radius: 8px;
 }
@@ -18,13 +18,13 @@
     flex: 0 1 auto;
 }
 
-.skeleton__in-item {
+.skeleton__line {
     width: 50%;
     height: 20px;
     margin: 8px 0;
 }
 
-.skeleton__in-item_short {
+.skeleton__line_short {
     width: 33%;
 }
 
