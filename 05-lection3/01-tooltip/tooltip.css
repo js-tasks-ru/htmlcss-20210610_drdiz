@@ -1,0 +1,48 @@
+.tooltip {
+    display: block;
+    box-sizing: border-box;
+    margin: 116px auto 62px;
+    padding: 0;
+    height: 22px;
+    width: 22px;
+    position: relative;
+    color: var(--grey-2);
+}
+
+.tooltip__icon {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.tooltip__description {
+    position: absolute;
+    width: 129px;
+    height: 45px;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+    background-color: var(--blue-1);
+    left: -250%;
+    top: -230%;
+    border-radius: 10px;
+    display: none;
+}
+
+.tooltip__description:after {
+    content: "";
+    border: 7px solid transparent;
+    border-bottom: 6px solid var(--blue-1);
+    position: absolute;
+    left: 46%;
+    bottom: -29%;
+    transform: rotate(180deg);
+}
+
+.tooltip__icon:hover~.tooltip__description {
+    display: block;
+}
