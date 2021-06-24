@@ -1,6 +1,7 @@
 @import '../fonts/fonts.css';
 :root {
     --white: #ffffff;
+    --whitesmoke: #F9FAFC;
     --black: #212429;
     --pink: #F784AD;
     --purple: #7048E8;
@@ -21,4 +22,5 @@
     --push: var(--grey-3);
     --disable: var(--grey-3);
     --alternate: var(--grey-4);
+    --shadow: rgba(33, 36, 41, 0.05);
 }
