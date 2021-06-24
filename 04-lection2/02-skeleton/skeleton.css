@@ -3,7 +3,6 @@
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    display: flexbox;
     box-sizing: border-box;
     margin: 0;
     padding: 24px 32px 40px 32px;
@@ -13,14 +12,13 @@
     border-radius: 8px;
 }
 
-.skeleton__flex-box {
+.skeleton__box {
     margin: 0;
     padding: 0;
     flex: 0 1 auto;
 }
 
 .skeleton__in-item {
-    display: block;
     width: 50%;
     height: 20px;
     margin: 8px 0;
@@ -30,27 +28,23 @@
     width: 33%;
 }
 
-.skeleton__flex-box:nth-child(1) {
+.skeleton__box:nth-child(1) {
     margin: 0 16px 24px 0;
-    padding: 0;
 }
 
-.skeleton__flex-box:nth-child(2) {
+.skeleton__box:nth-child(2) {
     margin: 0 0 24px 0;
-    padding: 0;
     flex: 1 1 auto;
 }
 
-.skeleton__flex-box:nth-child(3) {
+.skeleton__box:nth-child(3) {
     flex: 1 1 100%;
     margin: 0 0 8px 0;
-    padding: 0;
 }
 
-.skeleton__flex-box:nth-child(4) {
+.skeleton__box:nth-child(4) {
     flex: 1 1 100%;
     margin: 0;
-    padding: 0;
 }
 
 .skeleton__eclipse {
