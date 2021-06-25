@@ -1,6 +1,7 @@
 /*footer*/
 
 .footer {
+    font-family: Inter;
     display: block;
     height: 384px;
     background: var(--white);
