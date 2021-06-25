@@ -2,44 +2,5 @@
     display: block;
     height: 1035px;
     width: 100%;
-}
-
-.card-box__title {
-    font-family: Roboto;
-    font-size: 21px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 25px;
-    letter-spacing: 0em;
-    text-align: center;
-}
-
-.card-box {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    align-content: flex-start;
-    width: 100%;
-    padding: 165px 68px 165px 204px;
-}
-
-.card-box__card {
-    box-sizing: border-box;
-    min-width: 350px;
-    min-height: 367px;
-    box-shadow: 0px 2px 4px var(--shadow);
-    border-radius: 12px;
-    background-color: var(--white);
-    margin-bottom: 30px;
-    margin-right: auto;
-    padding: auto;
-    flex: 0 1 350px;
-    align-self: center;
-}
-
-.main {
-    display: block;
-    height: auto;
-    width: 100%;
     background-color: var(--whitesmoke);
 }
