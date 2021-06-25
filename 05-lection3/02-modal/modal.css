@@ -1,79 +1,47 @@
 .modal {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-}
-
-.modal__modal-window {
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: none;
     width: 100%;
     height: 100%;
     background-color: var(--modal-fon);
 }
 
-.modal__button {
-    background-color: var(--blue);
-    border: none;
-    box-sizing: border-box;
-    border-radius: 8px;
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 19px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: var(--white);
-    height: 48px;
-    width: 189px;
-}
-
 .modal__dialog {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     height: 298px;
     width: 428px;
     background-color: var(--white);
     opacity: 1;
     border-radius: 8px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 33px;
+    padding-top: 30px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
     align-items: flex-end;
 }
 
-.modal__close-btn {
+.modal__close {
+    position: absolute;
     width: 9px;
     height: 9px;
     opacity: 0.4;
-    align-self: flex-end;
+    border: none;
+    padding: 0;
+    background: none;
+    top: 15px;
+    right: 15px;
 }
 
-.modal__close-btn:hover {
+.modal__close:hover {
     opacity: 1;
-}
-
-.modal__close-btn:before,
-.modal__close-btn:after {
-    position: absolute;
-    content: ' ';
-    height: 13px;
-    width: 2px;
-    background-color: #333;
-}
-
-.modal__close-btn:before {
-    transform: rotate(45deg);
-}
-
-.modal__close-btn:after {
-    transform: rotate(-45deg);
 }
 
 .modal__description {
