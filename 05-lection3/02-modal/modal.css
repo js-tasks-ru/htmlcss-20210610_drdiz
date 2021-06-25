@@ -1,0 +1,100 @@
+.modal {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.modal__modal-window {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-fon);
+}
+
+.modal__button {
+    background-color: var(--blue);
+    border: none;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--white);
+    height: 48px;
+    width: 189px;
+}
+
+.modal__dialog {
+    position: absolute;
+    height: 298px;
+    width: 428px;
+    background-color: var(--white);
+    opacity: 1;
+    border-radius: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 33px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.modal__close-btn {
+    width: 9px;
+    height: 9px;
+    opacity: 0.4;
+    align-self: flex-end;
+}
+
+.modal__close-btn:hover {
+    opacity: 1;
+}
+
+.modal__close-btn:before,
+.modal__close-btn:after {
+    position: absolute;
+    content: ' ';
+    height: 13px;
+    width: 2px;
+    background-color: #333;
+}
+
+.modal__close-btn:before {
+    transform: rotate(45deg);
+}
+
+.modal__close-btn:after {
+    transform: rotate(-45deg);
+}
+
+.modal__description {
+    flex: 0 1 193px;
+    align-self: stretch;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.modal__title {
+    align-self: flex-start;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+}

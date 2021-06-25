@@ -23,4 +23,5 @@
     --disable: var(--grey-3);
     --alternate: var(--grey-4);
     --shadow: rgba(33, 36, 41, 0.05);
+    --modal-fon: #c4c4c4;
 }
