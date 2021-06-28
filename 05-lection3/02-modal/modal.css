@@ -13,10 +13,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 298px;
-    width: 428px;
+    max-width: 428px;
     background-color: var(--white);
-    opacity: 1;
     border-radius: 8px;
     padding-left: 40px;
     padding-right: 40px;
@@ -24,8 +22,6 @@
     padding-top: 30px;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-around;
-    align-items: flex-end;
 }
 
 .modal__close {
