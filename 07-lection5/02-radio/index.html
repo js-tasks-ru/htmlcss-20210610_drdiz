@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <!-- Страница радио -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./radio.css">
-    </head>
-    <body>
 
-    </body>
+<head>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="./radio.css">
+</head>
+
+<body>
+    <div class="radio radio-group ">
+        <label class="radio radio-group__radio">
+            <input type="radio" class="radio__input" name="name">
+            <div class="radio__state">
+                <div class=" radio radio__control">
+                <div class="radio__icon"></div>                  
+                </div>         
+                <div class="radio__title">Default</div>
+            </div>
+        </label>
+        <label class="radio radio-group__radio">
+            <input type="radio" class="radio__input" name="name" checked>
+            <div class="radio__state">
+                <div class="radio__control">
+                    <div class="radio__icon"></div>    
+                </div>  
+                <div class="radio__title">Checked</div>         
+            </div>
+        </label>
+        <label class="radio radio-group__radio">
+            <input type="radio" class="radio__input" name="name" disabled>
+            <div class="radio__state">
+                <div class="radio__control">
+                    <div class="radio__icon"></div>    
+                </div>  
+                <div class="radio__title">Default</div>         
+            </div>
+        </label>
+    </div>
+</body>
+
+<style>
+    .radio-group {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    .radio-group__radio {
+        margin-bottom: 16px;
+    }
+</style>
+
 </html>
