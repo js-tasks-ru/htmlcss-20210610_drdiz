@@ -60,7 +60,7 @@
 }
 
 .radio__input:disabled~.radio__state {
-    cursor: not-allowed
+    pointer-events: none;
 }
 
 .radio__input:disabled~.radio__state .radio__control {
