@@ -32,7 +32,7 @@
     height: 28px;
     position: relative;
     padding: 0;
-    transition: 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: transform 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .toggle__icon {
@@ -46,7 +46,7 @@
     top: 1px;
     left: 2px;
     transform: none;
-    transition: 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: transform 300ms ease-in-out;
 }
 
 .toggler__state {
@@ -67,15 +67,13 @@
 }
 
 .toggler__input:checked~.toggler__state .toggler__control {
-    background: var(--blue);
+    background-color: var(--blue);
     border-color: var(--blue);
-    transition: 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .toggler__input:checked~.toggler__state .toggle__icon {
     background: var(--white);
-    transform: translateX(99%);
-    transition: 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: translateX(22px);
 }
 
 .toggler__input:disabled~.toggler__state {
