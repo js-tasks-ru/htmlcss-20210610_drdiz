@@ -9,15 +9,16 @@
 
 <body>
     <div class="input__contaner">
-        <label class="input-text__label">
+        <div class="input-text">
+            <label class="input-text__label">
             Label
             <input type="text" class="input-text__input" placeholder="Placeholder">
         </label>
-        <label class="input-text__label">
+            <label class="input-text__label">
             Focus
             <input type="text" class="input-text__input input-text__input_focus" autofocus placeholder="Filled Input">
         </label>
-        <label class="input-text__label">
+            <label class="input-text__label">
             Succes
             <input type="text" class="input-text__input input-text__input_succes" placeholder="Success">
             <svg class="input-text__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -25,7 +26,7 @@
                 <path d="M22 4L12 14.01L9 11.01" stroke="#374FC7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
         </label>
-        <label class="input-text__label">
+            <label class="input-text__label">
             Error
             <input type="text" class="input-text__input input-text__input_error" placeholder="Error">
             <svg class="input-text__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -34,7 +35,14 @@
                 <path d="M12 16V16.5" stroke="#F03D3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
         </label>
+        </div>
     </div>
 </body>
+<style>
+    .input__contaner {
+        width: 730px;
+        height: 151px;
+    }
+</style>
 
 </html>
