@@ -1,0 +1,47 @@
+.histogramm {
+    font-family: "Inter";
+    font-size: 16px;
+    border: 1px solid var(--grey-3);
+    padding: 6% 9% 9% 9%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: var(--black);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+}
+
+.histogramm__title {
+    flex: 0 1 auto;
+    box-sizing: border-box;
+}
+
+.histogramm__viewlink {
+    flex: 0 1 auto;
+    box-sizing: border-box;
+    color: var(--blue-1);
+}
+
+.histogramm__total {
+    flex: 0 1 100%;
+    box-sizing: border-box;
+    font-size: 20px;
+    margin-bottom: 2%;
+}
+
+.histogramm__visualisation {
+    flex: 0 1 100%;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    align-items: flex-end;
+}
+
+.histogramm__row {
+    background-color: var(--blue-1);
+    flex: 0 1 auto;
+    margin-right: 1px;
+    flex-grow: 1;
+}

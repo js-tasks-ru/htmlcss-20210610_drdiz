@@ -4,7 +4,18 @@
 }
 
 .page__box {
-    max-width: 1110px;
+    width: 1110px;
     margin: auto;
     height: 100%;
+}
+
+.page__box_body-template {
+    min-height: 782px;
+}
+
+.page__box_header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
 }

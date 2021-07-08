@@ -1,11 +1,17 @@
 /*footer*/
 
 .footer {
-    font-family: Inter;
+    font-family: 'Inter';
     display: block;
     height: 384px;
     background: var(--white);
     padding: 72px 0 0 0;
+}
+
+.footer_template {
+    background-color: var(--grey-1);
+    max-height: 166px;
+    padding: 0;
 }
 
 .footer__text,
@@ -35,6 +41,18 @@
 
 .footer:last-child {
     margin-bottom: 0;
+}
+
+.footer__title_template {
+    color: var(--grey-3);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    margin: 0 auto;
+    padding: 56px 0;
 }
 
 

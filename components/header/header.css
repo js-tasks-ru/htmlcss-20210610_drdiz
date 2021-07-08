@@ -1,5 +1,6 @@
 .header {
-    padding: 96px 0 0 0;
+    font-family: "Inter";
+    padding: 0;
     height: 237px;
     background: var(--white);
 }
@@ -11,4 +12,60 @@
     line-height: 64px;
     letter-spacing: 0em;
     text-align: left;
+}
+
+.header_template {
+    height: 118px;
+    padding-top: 0;
+    background-color: var(--whitesmoke);
+}
+
+.header__logo-contaner {
+    padding-top: 25px;
+    height: 32px;
+}
+
+.header__logo {
+    max-height: 32px;
+    max-width: 32px;
+    margin-right: 8px;
+}
+
+.header__logo-contaner {
+    flex: 0 1 60%;
+    display: inline-flex;
+    flex-direction: row wr;
+}
+
+.header__nav {
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    width: 252px;
+    appearance: none;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0em;
+}
+
+.header__nav__item {
+    color: var(--grey-3);
+}
+
+.header__mode-box {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    padding-top: 25px;
+    width: 110px;
+}
+
+.header__logo-svg {
+    height: 24px;
+    width: 24px;
 }

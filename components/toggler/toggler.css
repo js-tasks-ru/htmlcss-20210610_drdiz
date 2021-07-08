@@ -1,0 +1,92 @@
+.toggler {
+    color: var(--black);
+    display: inline-flex;
+}
+
+.toggler-group {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.toggler-group__toggler {
+    margin-bottom: 16px;
+}
+
+.toggler__input {
+    opacity: 0;
+    pointer-events: none;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    appearance: none;
+}
+
+.toggler__control {
+    background: var(--white);
+    border: 1px solid var(--grey-2);
+    box-sizing: border-box;
+    border-radius: 16px;
+    width: 52px;
+    height: 28px;
+    position: relative;
+    padding: 0;
+}
+
+.toggle__icon {
+    position: absolute;
+    box-sizing: border-box;
+    height: 24px;
+    width: 24px;
+    background: var(--grey-2);
+    border-radius: 50%;
+    border: none;
+    top: 1px;
+    left: 2px;
+    transform: none;
+    transition: transform 300ms ease-in-out;
+}
+
+.toggler__state {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggler__title {
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 12px;
+}
+
+.toggler__input:checked~.toggler__state .toggler__control {
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+.toggler__input:checked~.toggler__state .toggle__icon {
+    background: var(--white);
+    transform: translateX(22px);
+}
+
+.toggler__input:disabled~.toggler__state {
+    pointer-events: none;
+}
+
+.toggler__input:disabled~.toggler__state .toggler__control {
+    background-color: var(--grey-2);
+}
+
+.toggler__input:disabled~.toggler__state .toggle__icon {
+    background: var(--white);
+}
+
+.toggler__input:disabled~.toggler__state .toggler__title {
+    color: var(--grey-2);
+}

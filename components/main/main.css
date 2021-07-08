@@ -1,6 +1,138 @@
 .main {
     display: block;
-    height: 1035px;
+    min-height: 100vh;
     width: 100%;
     background-color: var(--whitesmoke);
+    padding-top: 0px;
+}
+
+.main_index {
+    padding-top: 68px;
+}
+
+.main_template {
+    padding: 0;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 2.8fr;
+    grid-template-rows: min-content;
+    gap: 0px 0px;
+    align-self: start;
+    justify-self: center;
+}
+
+.main__element-box {
+    background: var(--white);
+    box-shadow: 0px 2px 4px rgba(33, 36, 41, 0.05);
+    border-radius: 12px;
+    padding-top: 32px;
+    padding-left: 48px;
+    padding-bottom: 64px;
+}
+
+.main__element-field {
+    color: black;
+}
+
+.main_element-title {
+    color: var(--grey-4);
+    font-family: "Inter";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.main__element_template {
+    color: black;
+}
+
+.main__tabs-label {
+    display: inline-flex;
+}
+
+.main__tabs-input {
+    width: 1px;
+    opacity: 0;
+}
+
+.main__tabs-title {
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: uppercase;
+    margin-right: 40px;
+    margin-bottom: 1px;
+    border-color: transparent;
+}
+
+.main__tabs-title-line {
+    margin: 0 auto;
+    border: none;
+    height: 5px;
+    background-color: transparent;
+    width: 0;
+}
+
+.main__tabs-input:checked~.main__tabs-title .main__tabs-title-line {
+    transition: width 0.2s ease-in-out;
+    height: 5px;
+    background-color: var(--black);
+    width: 100%;
+}
+
+.main__tabs {
+    display: flex;
+    border-bottom: 1px var(--grey-2) solid;
+}
+
+.main__tabs-code {
+    display: block;
+    width: 100%;
+}
+
+#tabs-css {
+    display: none;
+}
+
+.main__nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: auto;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+
+}
+.main__nav-subgroup {
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.main__nav-subgroup_list {
+    list-style: none;
+    padding: 0;
+}
+.main__nav-title-group {
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--black);
 }
