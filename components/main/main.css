@@ -87,6 +87,11 @@
     width: 100%;
 }
 
+.main__tabs-input:checked~.main__tabs-title {
+    transition: width 0.2s ease-in-out;
+    color: var(--black);
+}
+
 .main__tabs {
     display: flex;
     border-bottom: 1px var(--grey-2) solid;
