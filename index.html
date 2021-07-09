@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="./components/checkbox/checkbox.css">
 
 
+
 </head>
 
 <body>
@@ -62,7 +63,6 @@
                         </svg>
 
                 </div>
-
                 <nav class="header__nav">
                     <a class="header__nav__item" href="/">Components</a>
                     <a class="header__nav__item" href="#about">About</a>
@@ -117,25 +117,25 @@
                 <h1 class="header__title"> Reusable component library</h1>
                 <div class="header__tabs main__tabs">
                     <label class="main__tabs-label" for="1">
-                        <input class="main__tabs-input" type="radio" id="1" name="tabs-templated" checked>
+                        <input class="main__tabs-input" type="radio" id="1" name="tabs-index" checked>
                         <div class="main__tabs-title">All components
                             <hr class="main__tabs-title-line">
                         </div>
                     </label>
                     <label class="main__tabs-label" for="2">
-                        <input class="main__tabs-input" type="radio" id="2" name="tabs-templated" checked>
+                        <input class="main__tabs-input" type="radio" id="2" name="tabs-index" >
                         <div class="main__tabs-title">Elements
                             <hr class="main__tabs-title-line">
                         </div>
                     </label>
                     <label class="main__tabs-label" for="3">
-                        <input class="main__tabs-input" type="radio" id="3" name="tabs-templated" checked>
+                        <input class="main__tabs-input" type="radio" id="3" name="tabs-index" >
                         <div class="main__tabs-title">Container
                             <hr class="main__tabs-title-line">
                         </div>
                     </label>
                     <label class="main__tabs-label" for="4">
-                        <input class="main__tabs-input" type="radio" id="4" name="tabs-templated" checked>
+                        <input class="main__tabs-input" type="radio" id="4" name="tabs-index" >
                         <div class="main__tabs-title">Templates
                             <hr class="main__tabs-title-line">
                         </div>
@@ -149,7 +149,7 @@
         <main class="main main_index">
             <div class="page__box">
                 <div class="card-box">
-                    <div class="card-box__card">
+                    <div class="card-box__card" id="b1">
                         <div class="tooltip ">
 
                             <div class="tooltip__icon ">
@@ -170,7 +170,7 @@
                             <p class="card-box__description">Container</p>
                         </div>
                     </div>
-                    <div class="card-box__card">
+                    <div class="card-box__card" id="b2">
                         <div class="card-box__item card-box_double">
                             <div class="checkbox checkbox-group ">
                                 <label class="checkbox checkbox-group__checkbox">
@@ -242,7 +242,7 @@
                             <p class="card-box__description">Element</p>
                         </div>
                     </div>
-                    <div class="card-box__card">
+                    <div class="card-box__card" id="b3">
                         <div class="card-box__item">
                             <div class="calendar ">
                                 <div class="calendar__title ">October 2019</div>
@@ -297,7 +297,7 @@
                             <p class="card-box__description">Container</p>
                         </div>
                     </div>
-                    <div class="card-box__card">
+                    <div class="card-box__card" id="b4">
                         <div class="card-box__item">
                             <div class="input-text">
                                 <label class="input-text__label">
@@ -317,7 +317,7 @@
                             <p class="card-box__description">Container</p>
                         </div>
                     </div>
-                    <div class="card-box__card">
+                    <div class="card-box__card" id="b5">
                         <div class="card-box__item">
                             <div class="histogramm">
                                 <div class="histogramm__title">
@@ -374,7 +374,7 @@
                             <p class="card-box__description">Element</p>
                         </div>
                     </div>
-                    <div class="card-box__card">
+                    <div class="card-box__card" id="b6">
                         <div class="card-box__item">
                             <div class="avatar">
                                 <img class="avatar__img" src="./assets/images/avatar.jpg" alt="avatar">
@@ -406,7 +406,8 @@
 
     </div>
 
-    <script src="/components/Modal/index.js"></script>
+    <script src="./components/Modal/index.js"></script>
+    <!-- <script src="./index-p.js"></script> -->
 </body>
 
 </html>
