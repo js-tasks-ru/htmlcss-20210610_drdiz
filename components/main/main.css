@@ -92,6 +92,10 @@
     color: var(--black);
 }
 
+.main__tabs-title:hover {
+    color: var(--blue);
+}
+
 .main__tabs {
     display: flex;
     border-bottom: 1px var(--grey-2) solid;
