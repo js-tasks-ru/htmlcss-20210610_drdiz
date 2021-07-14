@@ -134,8 +134,11 @@
     z-index: 1000;
     visibility: visible;
     transition: 0.3s ease-in-out;
+    overflow: hidden;
 }
 
 .header__mobile-nav {
     visibility: hidden;
+    overflow: hidden;
+    height: 100vh;
 }
