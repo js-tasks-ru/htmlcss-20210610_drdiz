@@ -27,3 +27,31 @@
     --shadow: rgba(33, 36, 41, 0.05);
     --modal-fon: #c4c4c4;
 }
+
+html,
+body {
+    padding: 0;
+    min-width: 352px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.svg-sprite {
+    display: none;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.svg-icon {
+    display: inline-block;
+    color: var(--black);
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+}

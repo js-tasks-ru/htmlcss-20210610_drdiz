@@ -1,29 +1,31 @@
 .card-box {
-    display: flex;
-    flex-flow: row wrap;
-    align-content: space-between;
-    justify-content: space-between;
-    width: 100%;
-    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 16px;
+    margin: 0;
+    padding: 0;
 }
 
-.card-box__card {
-    min-height: 420px;
-    padding-bottom: 1%;
+@media (max-width: 768px) {
+    .card-box {
+        display: flex!important;
+        flex-direction: column;
+    }
+}
+
+.card {
     box-sizing: border-box;
     box-shadow: 0px 2px 4px var(--shadow);
     border-radius: 12px;
     background: var(--white);
-    flex: 0 1 30%;
-    align-self: center;
+    padding: 2rem;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-end;
-    align-content: center;
+    flex-direction: column;
 }
 
 .card-box__title {
-    font-family: Roboto;
+    font-family: "Roboto";
     font-size: 21px;
     font-style: normal;
     font-weight: 500;
@@ -32,15 +34,19 @@
     text-align: center;
     margin: 0 0 6px 0;
 }
+
 .card-box_double {
     display: flex;
-    
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
+
 .card-box__item {
-    max-height: 70%;
-    max-width: 90%;
-    padding-bottom: 5%;
-    padding-top: 5%;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card-box__description {
@@ -53,4 +59,11 @@
     letter-spacing: 0em;
     text-align: center;
     margin: 0;
+}
+
+.card__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
 }

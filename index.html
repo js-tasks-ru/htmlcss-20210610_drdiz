@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Мой проект</title>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/normalize.css">
@@ -25,33 +25,86 @@
     <link rel="stylesheet" href="./components/button/button.css">
     <link rel="stylesheet" href="./components/Radio/radio.css">
     <link rel="stylesheet" href="./components/checkbox/checkbox.css">
+    <link rel="stylesheet" href="./components/burger-menu/burger-menu.css">
+    <link rel="stylesheet" href="./components/moи-nav-list/mob-nav-list.css">
 
 
 
 </head>
 
 <body>
-    <div class="page">
-        <div class="modal" id="modal">
-            <div class="modal__dialog">
-                <button class="modal__close" id="modal-close">
+    <svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite">
+        <defs>
+            <g id="bar-chart" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m18 20v-10"/><path d="m12 20v-16"/><path d="m6 20v-6"/></g>
+            <g id="bell" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m18 8c0-1.5913-.6321-3.11742-1.7574-4.24264-1.1252-1.12522-2.6513-1.75736-4.2426-1.75736s-3.11742.63214-4.24264 1.75736-1.75736 2.65134-1.75736 4.24264c0 7-3 9-3 9h18s-3-2-3-9z"/><path d="m13.73 21c-.1758.3031-.4281.5547-.7318.7295-.3036.1749-.6478.267-.9982.267s-.6946-.0921-.9982-.267c-.3036-.1748-.556-.4264-.7318-.7295"/></g>
+            <g id="success"><path d="m15.663 3.77342c-1.7728-.7899-3.7534-.98559-5.6464-.55787-1.89309.42771-3.59718 1.4559-4.85815 2.93123-1.26096 1.47533-2.01124 3.31874-2.13894 5.25532-.1277 1.9366.37403 3.8625 1.43036 5.4907 1.05632 1.6281 2.61064 2.8712 4.43115 3.5437 1.82048.6726 3.80968.7387 5.67078.1884 1.8612-.5503 3.4946-1.6874 4.6566-3.2418 1.1621-1.5545 1.7905-3.4429 1.7916-5.3837v-.9194c0-.5523.4477-1 1-1s1 .4477 1 1v.92c-.0014 2.3721-.7694 4.6807-2.1897 6.5806-1.4203 1.8998-3.4167 3.2897-5.6914 3.9622-2.2747.6726-4.7059.5918-6.93098-.2302-2.22507-.822-4.1248-2.3413-5.41586-4.3313-1.29107-1.9899-1.90429-4.3439-1.74822-6.7108.15608-2.36692 1.07309-4.61998 2.61427-6.42316s3.62395-3.05986 5.9377-3.58262c2.31379-.52276 4.73449-.283591 6.90119.68184.5045.22478.7312.81596.5064 1.32043-.2247.50447-.8159.73121-1.3204.50643z"/><path d="m22.7068 3.29254c.3907.39033.391 1.02349.0007 1.41421l-10 10.01005c-.1875.1876-.4419.2931-.7073.2932-.2653.0001-.5197-.1053-.7073-.2929l-3.00001-3c-.39052-.3905-.39052-1.0237 0-1.4142.39053-.39053 1.02369-.39053 1.41422 0l2.29249 2.2925 9.2929-9.30215c.3904-.39072 1.0235-.39104 1.4143-.00071z"/></g>
+            <g id="error"><path d="m10.5282 2.28306c.4493-.25296.9562-.38584 1.4718-.38584s1.0225.13288 1.4718.38584c.4493.25295.8258.61743 1.0932 1.05827l.0029.00475 8.47 14.14002.0081.0138c.262.4536.4006.9679.402 1.4918.0015.5238-.1342 1.0389-.3936 1.494s-.6335.8343-1.085 1.1c-.4514.2656-.9646.4084-1.4884.4142l-.011.0001h-16.95097c-.52381-.0058-1.03697-.1487-1.48844-.4143-.45147-.2657-.82552-.6449-1.08492-1.1-.259403-.4551-.395123-.9702-.393656-1.494.001466-.5239.140069-1.0382.402016-1.4918l.008123-.0138 8.469997-14.14001.85785.51386-.85498-.51862c.26741-.44084.64388-.80532 1.09318-1.05827zm.618 2.09354-8.46349 14.1292c-.08518.1498-.13022.3191-.1307.4915-.00049.1746.04475.3463.13121.498.08647.1517.21116.2781.36165.3666.14917.0878.31855.1354.49155.1381h16.92718c.173-.0027.3424-.0503.4916-.1381.1505-.0885.2751-.2149.3616-.3666s.1317-.3234.1312-.498c-.0004-.1724-.0455-.3417-.1306-.4915l-8.4624-14.12721c-.0004-.00067-.0008-.00133-.0012-.00199-.089-.14606-.2141-.26683-.3632-.35077-.1497-.08432-.3187-.12861-.4906-.12861-.1718 0-.3408.04429-.4906.12861-.1491.08394-.2741.20471-.3632.35077z"/><path d="m12 8c.5523 0 1 .44772 1 1v4c0 .5523-.4477 1-1 1s-1-.4477-1-1v-4c0-.55228.4477-1 1-1z"/><path d="m12 15c.5523 0 1 .4477 1 1v.5c0 .5523-.4477 1-1 1s-1-.4477-1-1v-.5c0-.5523.4477-1 1-1z"/></g>        <g id="success" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m22 11.08v.92c-.0012 2.1564-.6995 4.2547-1.9907 5.9818-1.2911 1.7272-3.106 2.9907-5.1739 3.6021-2.068.6114-4.2781.538-6.30093-.2093-2.02279-.7473-3.74982-2.1285-4.92351-3.9375-1.17369-1.8091-1.73117-3.949-1.58928-6.1008.14188-2.15175.97553-4.19999 2.3766-5.83924s3.29451-2.78169 5.39791-3.25693c2.10341-.47523 4.30411-.25781 6.27381.61986"/><path d="m22 4-10 10.01-3-3"/></g>
+            <g id="calendar" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m19 4h-14c-1.10457 0-2 .89543-2 2v14c0 1.1046.89543 2 2 2h14c1.1046 0 2-.8954 2-2v-14c0-1.10457-.8954-2-2-2z"/><path d="m16 2v4"/><path d="m8 2v4"/><path d="m3 10h18"/></g>
+            <g id="card" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m21 4h-18c-1.10457 0-2 .89543-2 2v12c0 1.1046.89543 2 2 2h18c1.1046 0 2-.8954 2-2v-12c0-1.10457-.8954-2-2-2z"/><path d="m1 10h22"/></g>
+            <g id="cart" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m9 22c.55228 0 1-.4477 1-1s-.44772-1-1-1-1 .4477-1 1 .44772 1 1 1z"/><path d="m20 22c.5523 0 1-.4477 1-1s-.4477-1-1-1-1 .4477-1 1 .4477 1 1 1z"/><path d="m1 1h4l2.68 13.39c.09144.4604.34191.874.70755 1.1683.36563.2943.82315.4507 1.29245.4417h9.72c.4693.009.9268-.1474 1.2925-.4417.3656-.2943.6161-.7079.7075-1.1683l1.6-8.39h-17"/></g>
+            <g id="chat"><path d="m21 11.5c.0034 1.3199-.3049 2.6219-.9 3.8-.7056 1.4118-1.7902 2.5992-3.1326 3.4293-1.3423.8301-2.8892 1.2701-4.4674 1.2707-1.3199.0035-2.62188-.3049-3.8-.9l-5.7 1.9 1.9-5.7c-.59507-1.1781-.90344-2.4801-.9-3.8.00061-1.57821.44061-3.12512 1.27072-4.46742s2.01753-2.42698 3.42928-3.13255c1.17812-.59507 2.4801-.90344 3.8-.9h.5c2.0843.11499 4.053.99476 5.5291 2.47086s2.3559 3.44479 2.4709 5.52911z" stroke="#212429" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g>
+            <g id="cross" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m18 6-12 12"/><path d="m6 6 12 12"/></g>
+            <g id="download" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m21 15v4c0 .5304-.2107 1.0391-.5858 1.4142s-.8838.5858-1.4142.5858h-14c-.53043 0-1.03914-.2107-1.41421-.5858-.37508-.3751-.58579-.8838-.58579-1.4142v-4"/><path d="m7 10 5 5 5-5"/><path d="m12 15v-12"/></g>
+            <g id="edit" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m11 4h-7c-.53043 0-1.03914.21071-1.41421.58579-.37508.37507-.58579.88378-.58579 1.41421v14c0 .5304.21071 1.0391.58579 1.4142.37507.3751.88378.5858 1.41421.5858h14c.5304 0 1.0391-.2107 1.4142-.5858s.5858-.8838.5858-1.4142v-7"/><path d="m18.5 2.49998c.3978-.39782.9374-.62132 1.5-.62132s1.1022.2235 1.5.62132c.3978.39783.6213.93739.6213 1.5s-.2235 1.10218-.6213 1.5l-9.5 9.50002-4 1 1-4z"/></g>
+            <g id="filter"><path d="m22 3h-20l8 9.46v6.54l4 2v-8.54z" stroke="#212429" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g>
+            <g id="help" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m12 22c5.5228 0 10-4.4772 10-10 0-5.52285-4.4772-10-10-10-5.52285 0-10 4.47715-10 10 0 5.5228 4.47715 10 10 10z"/><path d="m9.09009 8.99996c.2351-.66833.69915-1.23189 1.30991-1.59087.6108-.35897 1.329-.49019 2.0273-.37042.6982.11977 1.3316.48281 1.7879 1.02482.4562.542.7059 1.22799.7049 1.93647 0 2.00004-3 3.00004-3 3.00004"/><path d="m12 16v.5"/></g>
+            <g id="home" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m3 9 9-7 9 7v11c0 .5304-.2107 1.0391-.5858 1.4142s-.8838.5858-1.4142.5858h-14c-.53043 0-1.03914-.2107-1.41421-.5858-.37508-.3751-.58579-.8838-.58579-1.4142z"/><path d="m9 22v-10h6v10"/></g>
+            <g id="image" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m19 3h-14c-1.10457 0-2 .89543-2 2v14c0 1.1046.89543 2 2 2h14c1.1046 0 2-.8954 2-2v-14c0-1.10457-.8954-2-2-2z"/><path d="m8.5 10c.82843 0 1.5-.67157 1.5-1.5s-.67157-1.5-1.5-1.5-1.5.67157-1.5 1.5.67157 1.5 1.5 1.5z"/><path d="m21 15-5-5-11 11"/></g>
+            <g id="inbox" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m22 12h-6l-2 3h-4l-2-3h-6"/><path d="m5.45 5.11-3.45 6.89v6c0 .5304.21071 1.0391.58579 1.4142.37507.3751.88378.5858 1.41421.5858h16c.5304 0 1.0391-.2107 1.4142-.5858s.5858-.8838.5858-1.4142v-6l-3.45-6.89c-.1656-.33321-.4208-.61363-.737-.80972-.3163-.19609-.6809-.30008-1.053-.30028h-9.52c-.37208.0002-.73674.10419-1.05296.30028-.31621.19609-.57146.47651-.73704.80972z"/></g>
+            <g id="map" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m1 6v16l7-4 8 4 7-4v-16l-7 4-8-4z"/><path d="m8 2v16"/><path d="m16 6v16"/></g>
+            <g id="menu" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m3 12h18"/><path d="m3 6h18"/><path d="m3 18h18"/></g>
+            <g id="moon"><path clip-rule="evenodd" d="m12.0811 2.50904c.1935.34338.1673.76841-.067 1.08538-.8543 1.15566-1.2653 2.57953-1.1584 4.01264.1068 1.43312.7245 2.78024 1.7407 3.79644s2.3633 1.6339 3.7965 1.7408c1.4331.1068 2.8569-.3042 4.0126-1.1584l.5944.8041.9958.092c-.1748 1.8914-.8846 3.6938-2.0464 5.1965-1.1618 1.5026-2.7275 2.6433-4.514 3.2886-1.7864.6453-3.7197.7684-5.57353.355-1.85387-.4133-3.55167-1.3461-4.89475-2.6892s-2.27587-3.0409-2.68924-4.8948c-.41337-1.8538-.29021-3.7871.35506-5.57351.64527-1.78643 1.78596-3.35215 3.28861-4.51394s3.30509-1.87161 5.19645-2.04639c.3925-.03627.7697.1614.9632.50478zm7.4797 12.17456c-1.0531.381-2.1827.5397-3.3167.4551-1.9108-.1425-3.707-.9661-5.0619-2.321-1.35491-1.3549-2.1785-3.15109-2.321-5.0619-.08456-1.13397.07408-2.2636.45509-3.31672-.77761.28135-1.51079.68296-2.17151 1.19381-1.20212.92943-2.11468 2.182-2.63089 3.61115-.51622 1.42916-.61475 2.97576-.28405 4.45886s1.07693 2.8413 2.15139 3.9158c1.07446 1.0744 2.43271 1.8207 3.91577 2.1514 1.4831.3307 3.0297.2321 4.4589-.2841 1.4291-.5162 2.6817-1.4287 3.6111-2.6309.5109-.6607.9125-1.3939 1.1938-2.1715z" fill-rule="evenodd"/></g>
+            <g id="pin" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m21 10c0 7-9 13-9 13s-9-6-9-13c0-2.38695.94821-4.67613 2.63604-6.36396s3.97701-2.63604 6.36396-2.63604c2.3869 0 4.6761.94821 6.364 2.63604 1.6878 1.68783 2.636 3.97701 2.636 6.36396z"/><path d="m12 13c1.6569 0 3-1.3431 3-3 0-1.65685-1.3431-3-3-3s-3 1.34315-3 3c0 1.6569 1.3431 3 3 3z"/></g>
+            <g id="search" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m11 19c4.4183 0 8-3.5817 8-8 0-4.41828-3.5817-8-8-8-4.41828 0-8 3.58172-8 8 0 4.4183 3.58172 8 8 8z"/><path d="m20.9999 21-4.35-4.35"/></g>
+            <g id="shape" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m18 8c1.6569 0 3-1.34315 3-3s-1.3431-3-3-3-3 1.34315-3 3 1.3431 3 3 3z"/><path d="m6 15c1.65685 0 3-1.3431 3-3s-1.34315-3-3-3-3 1.3431-3 3 1.34315 3 3 3z"/><path d="m18 22c1.6569 0 3-1.3431 3-3s-1.3431-3-3-3-3 1.3431-3 3 1.3431 3 3 3z"/><path d="m8.58984 13.51 6.82996 3.98"/><path d="m15.4098 6.51001-6.81996 3.97999"/></g>
+            <g id="star"><path d="m11 1 3.09 6.26 6.91 1.01-5 4.87 1.18 6.88-6.18-3.25-6.18 3.25 1.18-6.88-5-4.87 6.91-1.01z" stroke="#212429" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g>
+            <g id="sun"><path d="m12 8c-2.20914 0-4 1.79086-4 4 0 2.2091 1.79086 4 4 4 2.2091 0 4-1.7909 4-4 0-2.20914-1.7909-4-4-4zm-6 4c0-3.31371 2.68629-6 6-6 3.3137 0 6 2.68629 6 6 0 3.3137-2.6863 6-6 6-3.31371 0-6-2.6863-6-6z"/><path d="m12 0c.5523 0 1 .447715 1 1v2c0 .55228-.4477 1-1 1s-1-.44772-1-1v-2c0-.552285.4477-1 1-1z"/><path d="m12 20c.5523 0 1 .4477 1 1v2c0 .5523-.4477 1-1 1s-1-.4477-1-1v-2c0-.5523.4477-1 1-1z"/><path d="m3.51286 3.51286c.39053-.39052 1.02369-.39052 1.41422 0l1.42 1.42c.39052.39053.39052 1.02369 0 1.41422-.39053.39052-1.02369.39052-1.41422 0l-1.42-1.42c-.39052-.39053-.39052-1.02369 0-1.41422z"/><path d="m17.653 17.6529c.3905-.3905 1.0237-.3905 1.4142 0l1.42 1.42c.3905.3905.3905 1.0237 0 1.4142s-1.0237.3905-1.4142 0l-1.42-1.42c-.3905-.3905-.3905-1.0237 0-1.4142z"/><path d="m0 12c0-.5523.447715-1 1-1h2c.55228 0 1 .4477 1 1s-.44772 1-1 1h-2c-.552285 0-1-.4477-1-1z"/><path d="m20 12c0-.5523.4477-1 1-1h2c.5523 0 1 .4477 1 1s-.4477 1-1 1h-2c-.5523 0-1-.4477-1-1z"/><path d="m6.34708 17.6529c.39052.3905.39052 1.0237 0 1.4142l-1.42 1.42c-.39053.3905-1.02369.3905-1.41422 0-.39052-.3905-.39052-1.0237 0-1.4142l1.42-1.42c.39053-.3905 1.02369-.3905 1.41422 0z"/><path d="m20.4872 3.51286c.3905.39053.3905 1.02369 0 1.41422l-1.42 1.42c-.3905.39052-1.0237.39052-1.4142 0-.3905-.39053-.3905-1.02369 0-1.41422l1.42-1.42c.3905-.39052 1.0237-.39052 1.4142 0z"/></g>        <g id="upload" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m16 16-4-4-4 4"/><path d="m12 12v9"/><path d="m20.39 18.39c.9753-.5317 1.7458-1.3731 2.1898-2.3914.4441-1.0182.5364-2.1554.2624-3.2319-.274-1.0766-.8988-2.0312-1.7756-2.7133-.8768-.68203-1.9558-1.05268-3.0666-1.05342h-1.26c-.3027-1.17075-.8669-2.25766-1.6501-3.179s-1.7651-1.65315-2.8718-2.14039c-1.1068-.48724-2.30959-.71725-3.51802-.67272-1.20844.04452-2.39105.36241-3.45894.92978-1.06789.56736-1.99327 1.36944-2.70656 2.34592-.71329.97647-1.19593 2.10195-1.41164 3.29181-.21571 1.18982-.158875 2.41312.16623 3.57782.32511 1.1648.91003 2.2406 1.71079 3.1468"/><path d="m16 16-4-4-4 4"/></g>
+            <g id="user" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m20 21v-2c0-1.0609-.4214-2.0783-1.1716-2.8284-.7501-.7502-1.7675-1.1716-2.8284-1.1716h-8c-1.06087 0-2.07828.4214-2.82843 1.1716-.75014.7501-1.17157 1.7675-1.17157 2.8284v2"/><path d="m12 11c2.2091 0 4-1.79086 4-4s-1.7909-4-4-4c-2.20914 0-4 1.79086-4 4s1.79086 4 4 4z"/></g>
+            <g id="users" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m17 21v-2c0-1.0609-.4214-2.0783-1.1716-2.8284-.7501-.7502-1.7675-1.1716-2.8284-1.1716h-8c-1.06087 0-2.07828.4214-2.82843 1.1716-.75014.7501-1.17157 1.7675-1.17157 2.8284v2"/><path d="m9 11c2.2091 0 4-1.79086 4-4s-1.7909-4-4-4c-2.20914 0-4 1.79086-4 4s1.79086 4 4 4z"/><path d="m23 21v-2c-.0007-.8863-.2956-1.7472-.8386-2.4477-.543-.7004-1.3033-1.2007-2.1614-1.4223"/><path d="m16 3.13c.8604.22031 1.623.72071 2.1676 1.42232.5446.7016.8402 1.56451.8402 2.45268 0 .88818-.2956 1.75108-.8402 2.45269s-1.3072 1.20201-2.1676 1.42231"/></g>
+            <g id="zap"><path d="m13 2-10 12h9l-1 8 10-12h-9z" stroke="#212429" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g>
+            <g id="angle"><path clip-rule="evenodd" d="m4.29289 8.29289c.39053-.39052 1.02369-.39052 1.41422 0l7.29289 7.29291 7.2929-7.29291c.3905-.39052 1.0237-.39052 1.4142 0 .3905.39053.3905 1.02369 0 1.41422l-8 7.99999c-.3905.3905-1.0237.3905-1.4142 0l-8.00001-7.99999c-.39052-.39053-.39052-1.02369 0-1.41422z" fill="#212429" fill-rule="evenodd"/></g>
+             <g id="mn"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 1C0 0.447715 0.447715 0 1 0H19C19.5523 0 20 0.447715 20 1C20 1.55228 19.5523 2 19 2H1C0.447715 2 0 1.55228 0 1Z" fill="#212429"/></g>
+        </defs>
+    </svg>
+    <div class="modal" id="modal">
+        <div class="modal__dialog">
+            <button class="modal__close" id="modal-close">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4714 3.52861C12.7318 3.78896 12.7318 4.21107 12.4714 4.47141L4.47141 12.4714C4.21107 12.7318 3.78896 12.7318 3.52861 12.4714C3.26826 12.2111 3.26826 11.789 3.52861 11.5286L11.5286 3.52861C11.789 3.26826 12.2111 3.26826 12.4714 3.52861Z" fill="#495057"/>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M3.52861 3.52861C3.78896 3.26826 4.21107 3.26826 4.47141 3.52861L12.4714 11.5286C12.7318 11.789 12.7318 12.2111 12.4714 12.4714C12.2111 12.7318 11.789 12.7318 11.5286 12.4714L3.52861 4.47141C3.26826 4.21107 3.26826 3.78896 3.52861 3.52861Z" fill="#495057"/>
                         </svg>
                 </button>
-                <div class="modal__title">Modal title</div>
-                <div class="modal__description">
-                    <p>
-                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-                        officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-                    </p>
-                </div>
+            <div class="modal__title">Modal title</div>
+            <div class="modal__description">
+                <p>
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                    officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                </p>
             </div>
         </div>
-        <header class="header">
-            <div class="page__box page__box_header">
+    </div>
+    <header class="header">
+        <div class="header__mobile-nav" id="header__mobile-nav">
+            <div class="mob-nav-list">
+                sdfsfdsdfsdfs
+
+            </div>
+        </div>
+
+
+        <div class="page__box">
+            <div class="header__container ">
+                <div class="burger-menu">
+                    <label for="burger-menu-open">
+                        <input type="checkbox" class="burger-menu__input" id="burger-menu-open">
+                        <div class="burger-menu__logo">
+                            
+                            <div class="burger-menu__item"></div>
+                        </div>
+                    </label>
+                </div>
                 <div class="header__logo-contaner">
+
                     <svg class="header__logo" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                             <rect width="32" height="32" fill="#212429" />
                         </svg>
@@ -69,109 +122,84 @@
                     <a class="header__nav__item" href="/">Contact</a>
                 </nav>
                 <div class="header__mode-box">
-                    <svg class="header__logo-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8ZM6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18C8.68629 18 6 15.3137 6 12Z"
-                                fill="#212429" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M12 0C12.5523 0 13 0.447715 13 1V3C13 3.55228 12.5523 4 12 4C11.4477 4 11 3.55228 11 3V1C11 0.447715 11.4477 0 12 0Z"
-                                fill="#212429" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M12 20C12.5523 20 13 20.4477 13 21V23C13 23.5523 12.5523 24 12 24C11.4477 24 11 23.5523 11 23V21C11 20.4477 11.4477 20 12 20Z"
-                                fill="#212429" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M3.51286 3.51286C3.90339 3.12234 4.53655 3.12234 4.92708 3.51286L6.34708 4.93286C6.7376 5.32339 6.7376 5.95655 6.34708 6.34708C5.95655 6.7376 5.32339 6.7376 4.93286 6.34708L3.51286 4.92708C3.12234 4.53655 3.12234 3.90339 3.51286 3.51286Z"
-                                fill="#212429" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M17.653 17.6529C18.0435 17.2624 18.6767 17.2624 19.0672 17.6529L20.4872 19.0729C20.8777 19.4634 20.8777 20.0966 20.4872 20.4871C20.0967 20.8776 19.4635 20.8776 19.073 20.4871L17.653 19.0671C17.2625 18.6766 17.2625 18.0434 17.653 17.6529Z"
-                                fill="#212429" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M0 12C0 11.4477 0.447715 11 1 11H3C3.55228 11 4 11.4477 4 12C4 12.5523 3.55228 13 3 13H1C0.447715 13 0 12.5523 0 12Z"
-                                fill="#212429" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M20 12C20 11.4477 20.4477 11 21 11H23C23.5523 11 24 11.4477 24 12C24 12.5523 23.5523 13 23 13H21C20.4477 13 20 12.5523 20 12Z"
-                                fill="#212429" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M6.34708 17.6529C6.7376 18.0434 6.7376 18.6766 6.34708 19.0671L4.92708 20.4871C4.53655 20.8776 3.90339 20.8776 3.51286 20.4871C3.12234 20.0966 3.12234 19.4634 3.51286 19.0729L4.93286 17.6529C5.32339 17.2624 5.95655 17.2624 6.34708 17.6529Z"
-                                fill="#212429" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M20.4872 3.51286C20.8777 3.90339 20.8777 4.53655 20.4872 4.92708L19.0672 6.34708C18.6767 6.7376 18.0435 6.7376 17.653 6.34708C17.2625 5.95655 17.2625 5.32339 17.653 4.93286L19.073 3.51286C19.4635 3.12234 20.0967 3.12234 20.4872 3.51286Z"
-                                fill="#212429" />
-                        </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" class="svg-icon" fill="currentColor" id="light-theme-icon">
+                    <use xlink:href="#sun"></use>
+                  </svg>
 
                     <label class="toggler">
-                            <input type="checkbox" class="toggler__input">
-                            <div class="toggler__state">
-                                <div class=" toggler toggler__control">
-                                    <div class="toggle__icon"></div>
-                                </div>
+                        <input type="checkbox" class="toggler__input">
+                        <div class="toggler__state">
+                            <div class=" toggler toggler__control">
+                                <div class="toggle__icon"></div>
+                            </div>
+                        </div>
+                    </label>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" class="svg-icon" fill="currentColor" id="dark-theme-icon">
+                        <use xlink:href="#moon"></use>
+                      </svg>
+                </div>
+
+            </div>
+            <div class="header__iner ">
+
+                <h1 class="header__title "> Reusable component library</h1>
+            </div>
+            <div class="header__tabs " id="tabs">
+                <label class="main__tabs-label" for="1">
+                            <input class="main__tabs-input" type="radio" id="1" value="1" name="tabs-index" checked>
+                            <div class="main__tabs-title main__tabs-title_index ">All&nbsp;components
+                                <hr class="main__tabs-title-line">
                             </div>
                         </label>
-
-                    <svg class="header__logo-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M10.0811 0.509041C10.2746 0.852424 10.2484 1.27745 10.0141 1.59442C9.15985 2.75008 8.74879 4.17395 8.85566 5.60706C8.96254 7.04018 9.58023 8.38733 10.5964 9.40351C11.6126 10.4197 12.9597 11.0374 14.3929 11.1443C15.826 11.2511 17.2498 10.8401 18.4055 9.98585L18.9999 10.79L19.9957 10.882C19.8209 12.7734 19.1111 14.5758 17.9493 16.0785C16.7875 17.5811 15.2218 18.7218 13.4353 19.3671C11.6489 20.0124 9.71564 20.1355 7.86177 19.7221C6.0079 19.3088 4.3101 18.376 2.96702 17.0329C1.62394 15.6898 0.691147 13.992 0.277778 12.1381C-0.135591 10.2843 -0.0124347 8.35102 0.632836 6.56459C1.27811 4.77816 2.4188 3.21244 3.92145 2.05065C5.4241 0.88886 7.22654 0.179044 9.11788 0.00425972C9.51037 -0.0320113 9.88755 0.165658 10.0811 0.509041ZM17.5608 12.6836C16.5077 13.0646 15.3781 13.2233 14.2441 13.1387C12.3333 12.9962 10.5371 12.1726 9.1822 10.8177C7.82729 9.46282 7.0037 7.66661 6.8612 5.7558C6.77664 4.62183 6.93528 3.4922 7.31629 2.43908C6.53868 2.72043 5.8055 3.12204 5.14478 3.63289C3.94266 4.56232 3.0301 5.81489 2.51389 7.24404C1.99767 8.67318 1.89914 10.2198 2.22984 11.7029C2.56054 13.186 3.30677 14.5442 4.38123 15.6187C5.45569 16.6931 6.81394 17.4394 8.29703 17.7701C9.78013 18.1008 11.3267 18.0022 12.7559 17.486C14.185 16.9698 15.4376 16.0573 16.367 14.8551C16.8779 14.1944 17.2795 13.4612 17.5608 12.6836Z"
-                                fill="#212429" />
-                        </svg>
-                </div>
-                <h1 class="header__title"> Reusable component library</h1>
-                <div class="header__tabs main__tabs">
-                    <label class="main__tabs-label" for="1">
-                        <input class="main__tabs-input" type="radio" id="1" name="tabs-index" checked>
-                        <div class="main__tabs-title">All components
-                            <hr class="main__tabs-title-line">
-                        </div>
-                    </label>
-                    <label class="main__tabs-label" for="2">
-                        <input class="main__tabs-input" type="radio" id="2" name="tabs-index" >
-                        <div class="main__tabs-title">Elements
-                            <hr class="main__tabs-title-line">
-                        </div>
-                    </label>
-                    <label class="main__tabs-label" for="3">
-                        <input class="main__tabs-input" type="radio" id="3" name="tabs-index" >
-                        <div class="main__tabs-title">Container
-                            <hr class="main__tabs-title-line">
-                        </div>
-                    </label>
-                    <label class="main__tabs-label" for="4">
-                        <input class="main__tabs-input" type="radio" id="4" name="tabs-index" >
-                        <div class="main__tabs-title">Templates
-                            <hr class="main__tabs-title-line">
-                        </div>
-                    </label>
-
-                    <hr class="main__tabs-title-line">
-                </div>
+                <label class="main__tabs-label" for="2">
+                            <input class="main__tabs-input" type="radio" id="2" value="2" name="tabs-index" >
+                            <div class="main__tabs-title main__tabs-title_index ">Elements
+                                <hr class="main__tabs-title-line ">
+                            </div>
+                        </label>
+                <label class="main__tabs-label" for="3">
+                            <input class="main__tabs-input" type="radio" id="3" value="3" name="tabs-index" >
+                            <div class="main__tabs-title main__tabs-title_index ">Container
+                                <hr class="main__tabs-title-line">
+                            </div>
+                        </label>
+                <label class="main__tabs-label" for="4">
+                            <input class="main__tabs-input" type="radio" id="4" value="4" name="tabs-index" >
+                            <div class="main__tabs-title main__tabs-title_index ">Templates
+                                <hr class="main__tabs-title-line ">
+                            </div>
                 </label>
             </div>
-        </header>
-        <main class="main main_index">
-            <div class="page__box">
-                <div class="card-box">
-                    <div class="card-box__card" id="b1">
-                        <div class="tooltip ">
 
-                            <div class="tooltip__icon ">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    </header>
+    <main class="main main_index">
+        <div class="page__box">
+            <div class="card-box ">
+                <div class="card" id="b1">
+                    <div class="tooltip card__body ">
+
+                        <div class="tooltip__icon ">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12Z" fill="#212429"/>
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2582 8.02431C11.7927 7.94446 11.314 8.03194 10.9068 8.27126C10.4996 8.51057 10.1902 8.88628 10.0335 9.33184C9.85018 9.85282 9.27926 10.1266 8.75827 9.94333C8.23728 9.76005 7.96351 9.18914 8.14678 8.66815C8.46025 7.77704 9.07898 7.02562 9.89339 6.54699C10.7078 6.06836 11.6653 5.8934 12.5964 6.0531C13.5274 6.2128 14.3719 6.69685 14.9802 7.41952C15.5884 8.14204 15.9214 9.05647 15.9201 10.0009C15.9197 11.5313 14.7851 12.5419 13.9748 13.082C13.5392 13.3725 13.1107 13.586 12.795 13.7263C12.6358 13.7971 12.5016 13.8508 12.405 13.8876C12.3566 13.906 12.3174 13.9203 12.2888 13.9305L12.2541 13.9427L12.243 13.9464L12.2391 13.9477L12.2376 13.9483C12.2373 13.9484 12.2363 13.9487 11.9201 13L12.2363 13.9487C11.7124 14.1233 11.1461 13.8402 10.9714 13.3162C10.7969 12.7926 11.0796 12.2267 11.6028 12.0517L11.6016 12.0521C11.6017 12.0521 11.6018 12.052 11.6028 12.0517L11.6188 12.0461C11.6342 12.0406 11.6594 12.0314 11.693 12.0186C11.7605 11.9929 11.8607 11.9529 11.9827 11.8987C12.2296 11.789 12.551 11.6275 12.8654 11.4179C13.555 10.9582 13.9201 10.4691 13.9201 9.99999L13.9201 9.9985C13.9208 9.52618 13.7543 9.06886 13.4502 8.70752C13.146 8.34618 12.7238 8.10416 12.2582 8.02431Z" fill="#212429"/>
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15C12.5523 15 13 15.4477 13 16V16.5C13 17.0523 12.5523 17.5 12 17.5C11.4477 17.5 11 17.0523 11 16.5V16C11 15.4477 11.4477 15 12 15Z" fill="#212429"/>
                                     </svg>
 
-                            </div>
-                            <div class="tooltip__description ">
-                                <p>Helper Text</p>
-                            </div>
+                        </div>
+                        <div class="tooltip__description ">
+                            <p>Helper Text</p>
+                        </div>
 
-                        </div>
-                        <div class="card-box__item">
-                            <p class="card-box__title">Tooltip</p>
-                            <p class="card-box__description">Container</p>
-                        </div>
                     </div>
-                    <div class="card-box__card" id="b2">
-                        <div class="card-box__item card-box_double">
+                    <div class="card-box__item">
+                        <p class="card-box__title">Tooltip</p>
+                        <p class="card-box__description">Container</p>
+                    </div>
+                </div>
+                <div class="card" id="b2">
+                    <div class="card__body">
+                        <div class="card-box_double">
                             <div class="checkbox checkbox-group ">
                                 <label class="checkbox checkbox-group__checkbox">
                                 <input type="checkbox" class="checkbox__input">
@@ -237,177 +265,180 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="card-box__item">
-                            <p class="card-box__title">Cuctom form element</p>
-                            <p class="card-box__description">Element</p>
-                        </div>
                     </div>
-                    <div class="card-box__card" id="b3">
-                        <div class="card-box__item">
-                            <div class="calendar ">
-                                <div class="calendar__title ">October 2019</div>
-                                <div class="calendar__container ">
-                                    <div class="calendar__week-day ">Mon</div>
-                                    <div class="calendar__week-day ">Tue</div>
-                                    <div class="calendar__week-day ">Wed</div>
-                                    <div class="calendar__week-day ">Thu</div>
-                                    <div class="calendar__week-day ">Fri</div>
-                                    <div class="calendar__week-day ">Sat</div>
-                                    <div class="calendar__week-day ">Sun</div>
-                                    <div class="calendar__day "></div>
-                                    <div class="calendar__day "></div>
-                                    <div class="calendar__day "></div>
-                                    <div class="calendar__day "></div>
-                                    <div class="calendar__day ">1</div>
-                                    <div class="calendar__day ">2</div>
-                                    <div class="calendar__day ">3</div>
-                                    <div class="calendar__day ">4</div>
-                                    <div class="calendar__day ">5</div>
-                                    <div class="calendar__day ">6</div>
-                                    <div class="calendar__day ">7</div>
-                                    <div class="calendar__day ">8</div>
-                                    <div class="calendar__day ">9</div>
-                                    <div class="calendar__day ">10</div>
-                                    <div class="calendar__day ">11</div>
-                                    <div class="calendar__day ">12</div>
-                                    <div class="calendar__day ">13</div>
-                                    <div class="calendar__day ">14</div>
-                                    <div class="calendar__day ">15</div>
-                                    <div class="calendar__day ">16</div>
-                                    <div class="calendar__day ">17</div>
-                                    <div class="calendar__day calendar__day_choose ">18</div>
-                                    <div class="calendar__day calendar__day_period ">19</div>
-                                    <div class="calendar__day calendar__day_period ">20</div>
-                                    <div class="calendar__day calendar__day_period ">21</div>
-                                    <div class="calendar__day calendar__day_period ">22</div>
-                                    <div class="calendar__day calendar__day_choose ">23</div>
-                                    <div class="calendar__day ">24</div>
-                                    <div class="calendar__day ">25</div>
-                                    <div class="calendar__day ">26</div>
-                                    <div class="calendar__day ">27</div>
-                                    <div class="calendar__day ">28</div>
-                                    <div class="calendar__day ">29</div>
-                                    <div class="calendar__day ">30</div>
-                                    <div class="calendar__day ">31</div>
-                                </div>
+                    <div class="card-box__item">
+                        <p class="card-box__title">Cuctom form element</p>
+                        <p class="card-box__description">Element</p>
+                    </div>
+                </div>
+                <div class="card" id="b3">
+                    <div class="card__body">
+                        <div class="calendar ">
+                            <div class="calendar__title ">October 2019</div>
+                            <div class="calendar__container ">
+                                <div class="calendar__week-day ">Mon</div>
+                                <div class="calendar__week-day ">Tue</div>
+                                <div class="calendar__week-day ">Wed</div>
+                                <div class="calendar__week-day ">Thu</div>
+                                <div class="calendar__week-day ">Fri</div>
+                                <div class="calendar__week-day ">Sat</div>
+                                <div class="calendar__week-day ">Sun</div>
+                                <div class="calendar__day "></div>
+                                <div class="calendar__day "></div>
+                                <div class="calendar__day "></div>
+                                <div class="calendar__day "></div>
+                                <div class="calendar__day ">1</div>
+                                <div class="calendar__day ">2</div>
+                                <div class="calendar__day ">3</div>
+                                <div class="calendar__day ">4</div>
+                                <div class="calendar__day ">5</div>
+                                <div class="calendar__day ">6</div>
+                                <div class="calendar__day ">7</div>
+                                <div class="calendar__day ">8</div>
+                                <div class="calendar__day ">9</div>
+                                <div class="calendar__day ">10</div>
+                                <div class="calendar__day ">11</div>
+                                <div class="calendar__day ">12</div>
+                                <div class="calendar__day ">13</div>
+                                <div class="calendar__day ">14</div>
+                                <div class="calendar__day ">15</div>
+                                <div class="calendar__day ">16</div>
+                                <div class="calendar__day ">17</div>
+                                <div class="calendar__day calendar__day_choose ">18</div>
+                                <div class="calendar__day calendar__day_period ">19</div>
+                                <div class="calendar__day calendar__day_period ">20</div>
+                                <div class="calendar__day calendar__day_period ">21</div>
+                                <div class="calendar__day calendar__day_period ">22</div>
+                                <div class="calendar__day calendar__day_choose ">23</div>
+                                <div class="calendar__day ">24</div>
+                                <div class="calendar__day ">25</div>
+                                <div class="calendar__day ">26</div>
+                                <div class="calendar__day ">27</div>
+                                <div class="calendar__day ">28</div>
+                                <div class="calendar__day ">29</div>
+                                <div class="calendar__day ">30</div>
+                                <div class="calendar__day ">31</div>
                             </div>
                         </div>
-                        <div class="card-box__item">
-                            <p class="card-box__title">Calendar</p>
-                            <p class="card-box__description">Container</p>
-                        </div>
                     </div>
-                    <div class="card-box__card" id="b4">
-                        <div class="card-box__item">
-                            <div class="input-text">
-                                <label class="input-text__label">
+                    <div class="card-box__item">
+                        <p class="card-box__title">Calendar</p>
+                        <p class="card-box__description">Container</p>
+                    </div>
+                </div>
+                <div class="card" id="b4">
+
+                    <div class="card__item">
+
+                        <label class="input-text__label">
                                 Name
                                 <input type="text" class="input-text__input" placeholder="Placeholder">
-                            </label>
-                                <label class="input-text__label">
+                                </label>
+                        <label class="input-text__label">
                                 Email
                                 <input type="text" class="input-text__input" placeholder="Placeholder">
-                            </label>
+                                </label>
 
+
+                        <button class="button button_primary button_center" id="modal-open">Open modal</button>
+                    </div>
+                    <div class="card-box__item">
+                        <p class="card-box__title">Modal dialog</p>
+                        <p class="card-box__description">Container</p>
+                    </div>
+                </div>
+                <div class="card" id="b5">
+                    <div class="card__body">
+                        <div class="histogramm">
+                            <div class="histogramm__title">
+                                <p>
+                                    Total orders
+                                </p>
                             </div>
-                            <button class="button button_primary button_center" id="modal-open">Open modal</div>
-                        
-                        <div class="card-box__item">
-                            <p class="card-box__title">Modal dialog</p>
-                            <p class="card-box__description">Container</p>
+                            <div class="histogramm__viewlink">
+                                <p>
+                                    View all
+                                </p>
+                            </div>
+                            <div class="histogramm__total">
+                                <h4>
+                                    50254
+                                </h4>
+                            </div>
+                            <div class="histogramm__visualisation">
+                                <div class="histogramm__row" style="height: 100%;"></div>
+                                <div class="histogramm__row" style="height: 50%;"></div>
+                                <div class="histogramm__row" style="height: 10%;"></div>
+                                <div class="histogramm__row" style="height: 15%;"></div>
+                                <div class="histogramm__row" style="height: 100%;"></div>
+                                <div class="histogramm__row" style="height: 100%;"></div>
+                                <div class="histogramm__row" style="height: 50%;"></div>
+                                <div class="histogramm__row" style="height: 100%;"></div>
+                                <div class="histogramm__row" style="height: 60%;"></div>
+                                <div class="histogramm__row" style="height: 30%;"></div>
+                                <div class="histogramm__row" style="height: 66%;"></div>
+                                <div class="histogramm__row" style="height: 10%;"></div>
+                                <div class="histogramm__row" style="height: 19%;"></div>
+                                <div class="histogramm__row" style="height: 66%;"></div>
+                                <div class="histogramm__row" style="height: 10%;"></div>
+                                <div class="histogramm__row" style="height: 99%;"></div>
+                                <div class="histogramm__row" style="height: 10%;"></div>
+                                <div class="histogramm__row" style="height: 31%;"></div>
+                                <div class="histogramm__row" style="height: 66%;"></div>
+                                <div class="histogramm__row" style="height: 10%;"></div>
+                                <div class="histogramm__row" style="height: 91%;"></div>
+                                <div class="histogramm__row" style="height: 100%;"></div>
+                                <div class="histogramm__row" style="height: 10%;"></div>
+                                <div class="histogramm__row" style="height: 26%;"></div>
+                                <div class="histogramm__row" style="height: 40%;"></div>
+                                <div class="histogramm__row" style="height: 100%;"></div>
+                                <div class="histogramm__row" style="height: 50%;"></div>
+                                <div class="histogramm__row" style="height: 10%;"></div>
+                                <div class="histogramm__row" style="height: 19%;"></div>
+                                <div class="histogramm__row" style="height: 100%;"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-box__card" id="b5">
-                        <div class="card-box__item">
-                            <div class="histogramm">
-                                <div class="histogramm__title">
-                                    <p>
-                                        Total orders
-                                    </p>
-                                </div>
-                                <div class="histogramm__viewlink">
-                                    <p>
-                                        View all
-                                    </p>
-                                </div>
-                                <div class="histogramm__total">
-                                    <h4>
-                                        50254
-                                    </h4>
-                                </div>
-                                <div class="histogramm__visualisation">
-                                    <div class="histogramm__row" style="height: 100%;"></div>
-                                    <div class="histogramm__row" style="height: 50%;"></div>
-                                    <div class="histogramm__row" style="height: 10%;"></div>
-                                    <div class="histogramm__row" style="height: 15%;"></div>
-                                    <div class="histogramm__row" style="height: 100%;"></div>
-                                    <div class="histogramm__row" style="height: 100%;"></div>
-                                    <div class="histogramm__row" style="height: 50%;"></div>
-                                    <div class="histogramm__row" style="height: 100%;"></div>
-                                    <div class="histogramm__row" style="height: 60%;"></div>
-                                    <div class="histogramm__row" style="height: 30%;"></div>
-                                    <div class="histogramm__row" style="height: 66%;"></div>
-                                    <div class="histogramm__row" style="height: 10%;"></div>
-                                    <div class="histogramm__row" style="height: 19%;"></div>
-                                    <div class="histogramm__row" style="height: 66%;"></div>
-                                    <div class="histogramm__row" style="height: 10%;"></div>
-                                    <div class="histogramm__row" style="height: 99%;"></div>
-                                    <div class="histogramm__row" style="height: 10%;"></div>
-                                    <div class="histogramm__row" style="height: 31%;"></div>
-                                    <div class="histogramm__row" style="height: 66%;"></div>
-                                    <div class="histogramm__row" style="height: 10%;"></div>
-                                    <div class="histogramm__row" style="height: 91%;"></div>
-                                    <div class="histogramm__row" style="height: 100%;"></div>
-                                    <div class="histogramm__row" style="height: 10%;"></div>
-                                    <div class="histogramm__row" style="height: 26%;"></div>
-                                    <div class="histogramm__row" style="height: 40%;"></div>
-                                    <div class="histogramm__row" style="height: 100%;"></div>
-                                    <div class="histogramm__row" style="height: 50%;"></div>
-                                    <div class="histogramm__row" style="height: 10%;"></div>
-                                    <div class="histogramm__row" style="height: 19%;"></div>
-                                    <div class="histogramm__row" style="height: 100%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-box__item">
-                            <p class="card-box__title">Histogram</p>
-                            <p class="card-box__description">Element</p>
+                    <div class="card-box__item">
+                        <p class="card-box__title">Histogram</p>
+                        <p class="card-box__description">Element</p>
+                    </div>
+                </div>
+                <div class="card" id="b6">
+                    <div class="card__body">
+                        <div class="avatar">
+                            <img class="avatar__img" src="./assets/images/avatar.jpg" alt="avatar">
                         </div>
                     </div>
-                    <div class="card-box__card" id="b6">
-                        <div class="card-box__item">
-                            <div class="avatar">
-                                <img class="avatar__img" src="./assets/images/avatar.jpg" alt="avatar">
-                            </div>
-                        </div>
-                        <div class="card-box__item">
-                            <p class="card-box__title">Avatar</p>
-                            <p class="card-box__description">Element</p>
-                        </div>
+                    <div class="card-box__item">
+                        <p class="card-box__title">Avatar</p>
+                        <p class="card-box__description">Element</p>
                     </div>
                 </div>
             </div>
-        </main>
-        <foter class="footer">
-            <div class="footer__title page__box">
-                <a name="about"></a></p>
+        </div>
+    </main>
+    <foter class="footer ">
+        <div class="page__box">
+            <div class="footer__title">
+                <a name="about"></a>
+                </p>
                 <h2>About</h2>
             </div>
-            <div class="footer__text page__box">
+            <div class="footer__text ">
                 <p>
-                    This project is a collection of professionally designed, pre-built, 
-                    fully responsive HTML snippets you can drop into your projects. 
-                    Get started by checking out our free preview components, 
-                    or browsing the PNG previews in the categories you're most curious
+                    This project is a collection of professionally designed, pre-built, fully responsive HTML snippets you can drop into your projects. Get started by checking out our free preview components, or browsing the PNG previews in the categories you're most curious
                     about.
                 </p>
             </div>
-        </foter>
+        </div>
+    </foter>
 
-    </div>
+
 
     <script src="./components/Modal/index.js"></script>
-    <!-- <script src="./index-p.js"></script> -->
+    <script src="./index-p.js"></script>
+    <script src="./burger-menu.js"></script>
 </body>
 
 </html>

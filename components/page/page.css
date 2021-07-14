@@ -1,21 +1,15 @@
-.page {
-    display: block;
-    background: var(--white);
+.page__box {
+    margin: 0 auto;
+    max-width: 1110px;
 }
 
-.page__box {
-    width: 1110px;
-    margin: auto;
-    height: 100%;
+@media (max-width: 768px) {
+    .page__box {
+        max-width: auto;
+        padding: 0 10px;
+    }
 }
 
 .page__box_body-template {
     min-height: 782px;
-}
-
-.page__box_header {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-content: center;
 }

@@ -1,13 +1,10 @@
 .main {
-    display: block;
-    min-height: 100vh;
-    width: 100%;
     background-color: var(--whitesmoke);
-    padding-top: 0px;
 }
 
 .main_index {
-    padding-top: 68px;
+    padding-top: 4.5rem;
+    padding-bottom: 3rem;
 }
 
 .main_template {
@@ -50,7 +47,7 @@
 }
 
 .main__tabs-label {
-    display: inline-flex;
+    display: flex;
 }
 
 .main__tabs-input {
@@ -93,12 +90,32 @@
 }
 
 .main__tabs-title:hover {
-    color: var(--blue);
+    cursor: pointer;
+    animation-name: hovertitle;
+    animation-timing-function: linear;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
 }
 
-.main__tabs {
-    display: flex;
-    border-bottom: 1px var(--grey-2) solid;
+@keyframes hovertitle {
+    0% {
+        color: var(--grey-2);
+    }
+    25% {
+        color: var(--grey-3);
+    }
+    75% {
+        color: var(--grey-4);
+    }
+    100% {
+        color: var(--black);
+    }
+}
+
+.main__tabs-title_index {
+    text-transform: none;
 }
 
 .main__tabs-code {
@@ -120,8 +137,6 @@
     align-content: flex-start;
 }
 
-
-}
 .main__nav-subgroup {
     font-family: Inter;
     font-size: 14px;
@@ -131,10 +146,12 @@
     letter-spacing: 0em;
     text-align: left;
 }
+
 .main__nav-subgroup_list {
     list-style: none;
     padding: 0;
 }
+
 .main__nav-title-group {
     font-family: Inter;
     font-size: 20px;
