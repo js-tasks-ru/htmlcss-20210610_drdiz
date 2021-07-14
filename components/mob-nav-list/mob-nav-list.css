@@ -1,0 +1,35 @@
+.mob-nav-list {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9000;
+}
+
+.mob-nav-list_header {
+    padding: 25px 0;
+    border-bottom: 1px solid var(--grey-2);
+}
+
+.mob-nav-list__list {
+    padding-left: 2rem;
+}
+
+.mob-nav-lis__title {
+    color: var(--grey-3);
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.mob-nav-list__item {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--black);
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
